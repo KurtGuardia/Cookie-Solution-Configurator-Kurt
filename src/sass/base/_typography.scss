@@ -1,0 +1,25 @@
+@use '../abstracts/' as *;
+
+body {
+  font-family: 'hkgrotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: $color-black;
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+.subtitle {
+  color: $color-gray-dark;
+}
+
+.placeholder {
+  color: $color-gray-medium;
+}
+
+.bold {
+  font-weight: 500;
+}

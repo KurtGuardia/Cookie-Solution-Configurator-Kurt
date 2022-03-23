@@ -1,0 +1,44 @@
+@use '../abstracts/' as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //This sets the default font-size from 16px to 10px
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include mq(tab-land) {
+    //width of 1200px
+    font-size: 56.25%; //1rem = 9px
+  }
+
+  @include mq(tab-port) {
+    //width of 900px
+    font-size: 50%; //1 rem = 8px
+  }
+
+  @include mq(big-desktop) {
+    font-size: 75%; //1 rem = 12px
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  background-color: $color-gray-light;
+
+  @include mq(tab-port) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

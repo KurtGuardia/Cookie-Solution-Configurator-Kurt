@@ -1,0 +1,11 @@
+@use 'sass:map';
+@use './breakpoints' as *;
+
+// 'mq' stands for 'media query'
+@mixin mq($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media (min-width: $size) {
+    @content;
+  }
+}
