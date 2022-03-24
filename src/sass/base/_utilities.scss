@@ -10,6 +10,19 @@
 
 .flex {
   display: flex;
+  gap: $gap;
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-sb {
+    justify-content: space-between;
+  }
+
+  &-lg {
+    gap: $gap-large;
+  }
 }
 
 @each $pos in $position {
