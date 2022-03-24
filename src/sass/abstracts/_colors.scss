@@ -9,5 +9,6 @@ $color-yellow: #fff4e6;
 $color-white: #ffffff;
 
 $color-primary: $color-green;
-$color-ok: rgba($color-green, 0.2);
+$color-ok: $color-green;
+$color-ok-background: rgba($color-ok, 0.2);
 $color-warning: $color-yellow;

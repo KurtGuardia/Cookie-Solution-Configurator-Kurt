@@ -6,11 +6,11 @@ body {
     'Segoe UI Emoji', 'Segoe UI Symbol';
   color: $color-black;
   font-weight: 300;
+  font-size: $font-medium;
 }
 
 h2 {
   font-weight: 900;
-  min-height: 50vh;
 }
 
 .subtitle {
@@ -19,6 +19,7 @@ h2 {
 
 .placeholder {
   color: $color-gray-medium;
+  font-weight: 500;
 }
 
 .bold {

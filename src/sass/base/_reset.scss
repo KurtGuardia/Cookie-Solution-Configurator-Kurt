@@ -36,6 +36,17 @@ body {
   @include mq(tab-port) {
     padding: 0;
   }
+
+  a {
+    text-decoration: none;
+    color: $color-black;
+    font-size: $font-medium;
+    font-weight: 500;
+  }
+}
+
+.page {
+  background-color: $color-white;
 }
 
 ::selection {

@@ -16,9 +16,439 @@
       type="image/png"
       href="./assets/imgs/favicon.png"
     />
-    <title>Iubenda | Cookies</title>
+    <title>Iubenda | Set-Up</title>
   </head>
   <body>
-    <h2>Hello World</h2>
+    <div class="logo">
+      <img class="logo__img" src="./assets/imgs/logo.png" alt="Iubenda logo" />
+    </div>
+
+    <div class="page">
+      <section class="header flex hr-bottom">
+        <div class="header__left flex">
+          <div class="img-square background-gray">
+            <svg
+              width="123"
+              height="87"
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+            >
+              <use xlink:href="#icon-screen"></use>
+            </svg>
+          </div>
+
+          <div class="header__left--text">
+            <p class="bold">www.domain.com</p>
+            <p class="placeholder">Account & Billing info</p>
+          </div>
+        </div>
+
+        <div class="header__right flex">
+          <p class="bold">Your current compliance ratio</p>
+          <div class="por-ahora">23%</div>
+        </div>
+      </section>
+
+      <section class="cookie">
+        <div class="banner flex">
+          <div class="img-square background-green">
+            <svg
+              width="100"
+              height="100"
+              viewBox="0 0 50 50"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+            >
+              <use xlink:href="#icon-checkmark"></use>
+            </svg>
+          </div>
+          <div class="banner__text">
+            <p>
+              Your website has been created and your legal documents have been
+              generated. Setup your cookie banner and privacy button to complete
+              the integration
+            </p>
+          </div>
+        </div>
+
+        <div class="toggle flex">
+          <label class="toggle__switch">
+            <input type="checkbox" />
+            <span class="toggle__switch--slider"></span>
+          </label>
+
+          <div class="toggle__text">
+            <h2>Add a cookie banner</h2>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="option">
+            <p class="subtitle">Position</p>
+            <div class="por-ahora choice">
+              <img src="./assets/imgs/banner_light.png" alt="por ahora" />
+            </div>
+          </div>
+
+          <div class="option">
+            <p class="subtitle">Theme</p>
+            <div class="flex">
+              <div class="choice">
+                <div class="choice__box">
+                  <img src="./assets/imgs/banner_dark.png" alt="Dark theme" />
+                </div>
+                <div class="choice__text">
+                  <p>Dark</p>
+                </div>
+              </div>
+
+              <div class="choice">
+                <div class="choice__box">
+                  <img src="./assets/imgs/banner_light.png" alt="Light theme" />
+                </div>
+                <div class="choice__text">
+                  <p>Light</p>
+                </div>
+              </div>
+
+              <div class="choice">
+                <div class="choice__box">
+                  <div class="span">&plus;</div>
+                </div>
+                <div class="choice__text">
+                  <p>Custom Style</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="option">
+          <p class="subtitle">Legislation</p>
+
+          <div class="flex">
+            <div class="choice__active">
+              <p>GDRP Only</p>
+            </div>
+
+            <div class="choice">
+              <p>CCPA Only</p>
+            </div>
+
+            <div class="choice">
+              <p>Both</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="option">
+          <p class="subtitle">Require consent from</p>
+
+          <div class="flex">
+            <div class="choice__active">
+              <svg
+                width="100"
+                height="100"
+                viewBox="0 0 50 50"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                preserveAspectRatio="xMinYMin"
+              >
+                <use xlink:href="#icon-eu-flag"></use>
+              </svg>
+              <p>EU Only</p>
+            </div>
+
+            <div class="choice">
+              <svg
+                width="100"
+                height="100"
+                viewBox="0 0 50 50"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                preserveAspectRatio="xMinYMin"
+              >
+                <use xlink:href="#icon-world"></use>
+              </svg>
+              <p>World Wide</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="option">
+          <p class="subtitle">Banner buttons</p>
+
+          <div class="flex">
+            <label class="option__input"
+              >Explicit Accept and Customize buttons
+              <input
+                class="option__input--checkbox"
+                type="checkbox"
+                checked="checked"
+              />
+              <span class="option__input--checkmark"></span>
+            </label>
+          </div>
+
+          <div class="flex">
+            <label class="option__input"
+              >Explicit Reject button
+              <input
+                class="option__input--checkbox"
+                type="checkbox"
+                checked="checked"
+              />
+              <span class="option__input--checkmark"></span>
+            </label>
+          </div>
+
+          <div class="banner">
+            <div class="banner__warning flex">
+              <div class="banner__warning--icon">
+                <svg
+                  width="50"
+                  height="50"
+                  viewBox="0 0 500 500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  preserveAspectRatio="xMinYMin"
+                >
+                  <use xlink:href="#icon-alert"></use>
+                </svg>
+              </div>
+              <p class="banner__warning--text">
+                You should activate this feature is you show
+                <strong>ads</strong> on your website
+              </p>
+            </div>
+          </div>
+
+          <div class="flex">
+            <label class="option__input"
+              >Enable Google AMP support
+              <input
+                class="option__input--checkbox"
+                type="checkbox"
+                checked="checked"
+              />
+              <span class="option__input--checkmark"></span>
+            </label>
+            <div class="por-ahora">?</div>
+          </div>
+
+          <div class="flex">
+            <label class="option__input"
+              >Automatically block scripts detected by plugin
+              <input
+                class="option__input--checkbox"
+                type="checkbox"
+                checked="checked"
+              />
+              <span class="option__input--checkmark"></span>
+            </label>
+            <div class="por-ahora">?</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="privacy">
+        <div class="toggle flex">
+          <label class="toggle__switch">
+            <input type="checkbox" />
+            <span class="toggle__switch--slider"></span>
+          </label>
+
+          <div class="toggle__text">
+            <h2>Add the privacy policy button</h2>
+          </div>
+        </div>
+
+        <div class="option">
+          <p class="subtitle">Button style</p>
+          <div class="flex">
+            <div class="choice">
+              <div class="choice__box">
+                <img src="./assets/imgs/button_light.png" alt="Button light" />
+              </div>
+              <div class="choice__text">
+                <p>Light</p>
+              </div>
+            </div>
+
+            <div class="choice">
+              <div class="choice__box">
+                <img src="./assets/imgs/button_dark.png" alt="button dark" />
+              </div>
+              <div class="choice__text">
+                <p>Dark</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="option">
+          <p class="subtitle">Button position</p>
+          <div class="flex">
+            <label class="option__input"
+              >Explicit Accept and Customize buttons
+              <input
+                class="option__input--checkbox"
+                type="checkbox"
+                checked="checked"
+              />
+              <span class="option__input--checkmark"></span>
+            </label>
+
+            <label class="option__input"
+              >Integrate button manually
+              <input
+                class="option__input--checkbox"
+                type="checkbox"
+                checked="checked"
+              />
+              <span class="option__input--checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta flex flex-sb hr-top">
+        <button class="btn btn-ghost">Reset settiings</button>
+        <button class="btn btn-cta">Integrate</button>
+      </section>
+    </div>
+
+    <div class="footer flex flex-center">
+      <a href="#">Documentation</a>
+      <a href="#">Contact support</a>
+    </div>
+
+    <svg display="none">
+      <defs>
+        <g id="icon-alert">
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="#000"
+            stroke-miterlimit="10"
+            stroke-width="32"
+            d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z"
+          />
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="#000"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="32"
+            d="M250.26,166.05,256,288l5.73-121.95a5.74,5.74,0,0,0-5.79-6h0A5.74,5.74,0,0,0,250.26,166.05Z"
+          />
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            d="M256,367.91a20,20,0,1,1,20-20A20,20,0,0,1,256,367.91Z"
+          />
+        </g>
+        <g id="icon-checkmark">
+          <g
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            fill-rule="evenodd"
+            stroke="#000"
+            transform="translate(2 2)"
+          >
+            <circle cx="22" cy="22" r="22" />
+            <path
+              d="m11.3829457 21.6774194 7.3720626 7.3225806 14.0946041-14"
+            />
+          </g>
+        </g>
+        <g id="icon-eu-flag">
+          <g xmlns="http://www.w3.org/2000/svg" fill="none" fill-rule="evenodd">
+            <g fill="#000">
+              <path
+                fill-opacity=".05"
+                d="m4.5 4.5h25.5v18h-25.5z"
+                transform="translate(1 3)"
+              />
+              <path
+                d="m13.5 6c.4142136 0 .75-.33578644.75-.75s-.3357864-.75-.75-.75-.75.33578644-.75.75.3357864.75.75.75z"
+                transform="translate(1 3)"
+              />
+              <path
+                d="m13.5 16.5c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75-.75.3357864-.75.75.3357864.75.75.75z"
+                transform="translate(1 3)"
+              />
+              <path
+                d="m18.75 11.25c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75-.75.3357864-.75.75.3357864.75.75.75z"
+                transform="rotate(90 17.75 12.5)"
+              />
+              <path
+                d="m8.25 11.25c.41421356 0 .75-.3357864.75-.75s-.33578644-.75-.75-.75-.75.3357864-.75.75.33578644.75.75.75z"
+                transform="rotate(90 7.25 12.5)"
+              />
+              <path
+                d="m17.2123106 14.9623106c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75-.75.3357864-.75.75.3357864.75.75.75z"
+                transform="rotate(135 17.091 15.92)"
+              />
+              <path
+                d="m9.7876894 7.5376894c.4142136 0 .75-.33578644.75-.75s-.3357864-.75-.75-.75c-.41421356 0-.75.33578644-.75.75s.33578644.75.75.75z"
+                transform="rotate(135 9.666 8.495)"
+              />
+              <path
+                d="m9.7876894 14.9623106c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75c-.41421356 0-.75.3357864-.75.75s.33578644.75.75.75z"
+                transform="rotate(-135 10.909 15.505)"
+              />
+              <path
+                d="m17.2123106 7.5376894c.4142136 0 .75-.33578644.75-.75s-.3357864-.75-.75-.75-.75.33578644-.75.75.3357864.75.75.75z"
+                transform="rotate(-135 18.334 8.08)"
+              />
+            </g>
+            <path
+              stroke="#000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m.75 1.5h25.3906929v18h-25.3906929z"
+              transform="translate(1 3)"
+            />
+            <path
+              fill="#d8d8d8"
+              stroke="#000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m.75 0v26.027153"
+              transform="translate(1 3)"
+            />
+          </g>
+        </g>
+        <g id="icon-world">
+          <g
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            fill-rule="evenodd"
+            transform="translate(1 2)"
+          >
+            <circle cx="18" cy="14.368" r="13" fill="#000" fill-opacity=".05" />
+            <g stroke="#000">
+              <circle cx="13" cy="13.368" r="13" />
+              <path
+                d="m17.5454545 4.36842105h-3.4090909l-2.0454545 1.71428572v1.14285714h-2.0454546l-2.0454545 1.14285714v1.14285715h3.4090909l.6818182.5714286h1.3636364l1.3636363 1.1428571h2.7272727l1.3636364 1.1428572 1.3636364-1.1428572h2.7272727"
+              />
+              <path
+                d="m15.5 15.2434211h-1.25l-1.875-1.875h-2.5l-1.875 1.875 1.25 3.125h1.875l1.25 1.25v3.125l.625.625h1.25l1.875-1.875v-1.875l1.875-1.875z"
+              />
+            </g>
+          </g>
+        </g>
+        <g id="icon-screen">
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            d="M2.08,0H120.8h2.08v2.08v69.2v2.08h-2.08H77.57v8.29h7.28v5.15H37.88v-5.15h7.28v-8.29H2.08H0v-2.08V2.08V0H2.08L2.08,0 L2.08,0L2.08,0z M118.73,4.15H4.15V69.2h114.57L118.73,4.15L118.73,4.15L118.73,4.15L118.73,4.15z"
+          />
+        </g>
+      </defs>
+    </svg>
   </body>
 </html>

@@ -1,7 +1,27 @@
+@use '../abstracts' as *;
+
 .padding-section {
   padding: 3rem;
 }
 
 .padding-content {
   padding-bottom: 4rem;
+}
+
+.flex {
+  display: flex;
+}
+
+@each $pos in $position {
+  .hr-#{$pos} {
+    border-#{$pos}: 1px solid $color-gray-medium;
+  }
+}
+
+.background-green {
+  background-color: $color-ok-background;
+}
+
+.background-gray {
+  background-color: $color-gray-light;
 }

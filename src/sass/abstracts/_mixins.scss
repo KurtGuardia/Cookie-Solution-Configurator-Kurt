@@ -5,7 +5,13 @@
 @mixin mq($key) {
   $size: map.get($breakpoints, $key);
 
-  @media (min-width: $size) {
-    @content;
+  @if $key == big-desktop {
+    @media (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $size) {
+      @content;
+    }
   }
 }
