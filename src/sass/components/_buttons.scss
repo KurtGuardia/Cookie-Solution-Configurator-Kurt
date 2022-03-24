@@ -29,6 +29,10 @@
       transform: translateY(-3px);
       box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
     }
+
+    @include mq(tab-land) {
+      padding: 1.5rem 12rem;
+    }
   }
 
   &--ghost {

@@ -1,19 +1,26 @@
 @use '../abstracts' as *;
 
 .img-square {
-  display: flex;
-  align-items: center;
+  @include center-indv();
   padding: 2rem;
   border-radius: 5px;
 
+  @include mq(tab-land) {
+    padding: 1.5rem;
+  }
+
   &--small {
-    width: 120px;
-    height: 120px;
+    width: 10rem;
+    height: 10rem;
   }
 
   &--medium {
-    width: 150px;
-    height: 150px;
+    width: 12rem;
+    height: 12rem;
+
+    @include mq(tab-land) {
+      height: 10rem;
+    }
   }
 
   &--bg-green {
@@ -25,6 +32,6 @@
   }
 
   & > * {
-    width: 100%;
+    @include center-indv();
   }
 }
