@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.img-square {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 5px;
+
+  &--small {
+    width: 120px;
+    height: 120px;
+  }
+
+  &--medium {
+    width: 150px;
+    height: 150px;
+  }
+
+  &--bg-green {
+    background-color: $color-ok-background;
+  }
+
+  &--bg-gray {
+    background-color: $color-gray-light;
+  }
+
+  & > * {
+    width: 100%;
+  }
+}

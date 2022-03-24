@@ -5,6 +5,9 @@ body {
     'Roboto', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
   color: $color-black;
+}
+
+p {
   font-weight: 300;
   font-size: $font-medium;
 }
