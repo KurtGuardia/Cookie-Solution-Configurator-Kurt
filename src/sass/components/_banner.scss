@@ -2,7 +2,7 @@
 
 .banner {
   @include center-indv();
-  border: 1px solid $color-gray-light;
+  @include border();
   position: relative;
 
   &::before,
@@ -34,6 +34,7 @@
   &--warning {
     background-color: $color-yellow;
     color: $color-maroon;
+    border: none;
   }
 
   &--small {
@@ -61,7 +62,6 @@
     &:before {
       top: -13px;
       left: -1px;
-      border-left: 10px solid $color-gray-light;
     }
 
     &:after {

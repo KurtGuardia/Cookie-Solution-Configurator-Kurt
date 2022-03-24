@@ -22,3 +22,7 @@
     border-#{$pos}: 1px solid $color-gray-medium;
   }
 }
+
+.helper {
+  width: fit-content;
+}

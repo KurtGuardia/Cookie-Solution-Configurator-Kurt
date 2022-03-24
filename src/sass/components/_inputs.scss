@@ -1,0 +1,78 @@
+@use '../abstracts/' as *;
+
+.option {
+  &__label {
+    display: flex;
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    font-size: 2.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:hover .option__input ~ .option__check {
+      background-color: $color-white;
+    }
+
+    &:hover .option__input:checked ~ .option__check {
+      background-color: $color-gray-light;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &__input:checked ~ &__check {
+    background-color: $color-white;
+  }
+
+  &__input:checked ~ &__check::after {
+    display: block;
+  }
+
+  &__check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: $color-gray-light;
+    transition: all 0.5s;
+    @include border();
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: none;
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid $color-primary;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    &--radio {
+      border-radius: 50%;
+
+      &::after {
+        border: 5px solid $color-primary;
+        top: 7px;
+        left: 7px;
+        border-radius: 50%;
+        background: white;
+      }
+    }
+  }
+}
