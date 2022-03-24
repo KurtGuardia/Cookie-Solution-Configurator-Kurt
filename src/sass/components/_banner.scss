@@ -1,0 +1,74 @@
+@use '../abstracts/' as *;
+
+.banner {
+  @include center-indv();
+  border: 1px solid $color-gray-light;
+  position: relative;
+
+  &::before,
+  &::after {
+    @include center-indv();
+    justify-content: center;
+    content: '\00d7';
+    cursor: pointer;
+    font-size: $font-small;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: $color-gray-medium;
+    color: $color-white;
+  }
+
+  &__text {
+    padding: 3rem;
+    width: 80%;
+
+    @include mq(tab-land) {
+      padding: 1.5rem;
+    }
+  }
+
+  &--warning {
+    background-color: $color-yellow;
+    color: $color-maroon;
+  }
+
+  &--small {
+    width: max-content;
+    padding: 0 6rem 0 1rem;
+    margin: 1rem 2rem;
+    position: relative;
+    border-radius: 5px;
+
+    & .banner__text {
+      padding: 0 1rem;
+      width: 100%;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      visibility: visible;
+      background-color: transparent;
+      border: 10px solid transparent;
+      border-radius: 0;
+    }
+
+    &:before {
+      top: -13px;
+      left: -1px;
+      border-left: 10px solid $color-gray-light;
+    }
+
+    &:after {
+      top: -11px;
+      left: 0px;
+      border-left: 10px solid $color-yellow;
+      clear: both;
+    }
+  }
+}

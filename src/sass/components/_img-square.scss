@@ -19,6 +19,7 @@
     height: 12rem;
 
     @include mq(tab-land) {
+      width: 10rem;
       height: 10rem;
     }
   }
@@ -29,9 +30,5 @@
 
   &--bg-gray {
     background-color: $color-gray-light;
-  }
-
-  & > * {
-    @include center-indv();
   }
 }
