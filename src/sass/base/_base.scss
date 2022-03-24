@@ -46,6 +46,15 @@ body {
 
 .page {
   background-color: $color-white;
+  margin: 0 4rem;
+}
+
+section {
+  padding: 4rem;
+}
+
+.option {
+  padding-bottom: 4rem;
 }
 
 ::selection {

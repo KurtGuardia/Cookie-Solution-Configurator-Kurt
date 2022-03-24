@@ -1,13 +1,5 @@
 @use '../abstracts' as *;
 
-.padding-section {
-  padding: 4rem;
-}
-
-.padding-option {
-  padding-bottom: 4rem;
-}
-
 .flex {
   display: flex;
   gap: $gap;
