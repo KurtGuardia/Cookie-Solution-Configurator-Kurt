@@ -10,6 +10,7 @@
 @use './components/choice';
 @use './components/img-square';
 @use './components/inputs';
-@use './components/select';
+@use './components/dropdown';
+@use './components/positions';
 @use './components/toggle';
-@use './layout/header';
+@use './layout/layout';

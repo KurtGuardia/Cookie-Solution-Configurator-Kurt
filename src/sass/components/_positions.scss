@@ -1,0 +1,73 @@
+@use '../abstracts/' as *;
+
+.position::before {
+  content: '';
+  display: block;
+  padding-bottom: 55%;
+}
+
+.position::after {
+  background-color: $color-gray-dark;
+  content: '';
+  position: absolute;
+}
+
+.position[data-pos='1']::after,
+.position[data-pos='2']::after {
+  left: 0;
+}
+
+.position[data-pos='3']::after,
+.position[data-pos='4']::after {
+  right: 0;
+}
+
+.position[data-pos='1']::after,
+.position[data-pos='4']::after,
+.position[data-pos='5']::after,
+.position[data-pos='6']::after {
+  top: 0;
+}
+
+.position[data-pos='2']::after,
+.position[data-pos='3']::after,
+.position[data-pos='7']::after,
+.position[data-pos='8']::after {
+  bottom: 0;
+}
+
+.position[data-pos='5']::after,
+.position[data-pos='8']::after {
+  height: 2rem;
+  left: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.position[data-pos='6']::after,
+.position[data-pos='7']::after {
+  transform: translateX(-50%);
+  left: 50%;
+  margin: 0;
+  width: 4rem;
+}
+
+.position[data-pos='9']::after {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  margin: 0;
+  top: 50%;
+}
+
+.position[data-pos='1']::after,
+.position[data-pos='2']::after,
+.position[data-pos='3']::after,
+.position[data-pos='4']::after,
+.position[data-pos='6']::after,
+.position[data-pos='7']::after,
+.position[data-pos='9']::after {
+  border-radius: 0.25rem;
+  height: 2.2rem;
+  margin: 0.7rem;
+  width: 5.5rem;
+}

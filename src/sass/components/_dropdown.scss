@@ -1,0 +1,79 @@
+@use '../abstracts/' as *;
+
+.select-wrapper {
+  user-select: none;
+  min-width: 20rem;
+  @include border();
+  border-radius: 5px 0px 0px 5px;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.select__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 11rem;
+  background: repeating-conic-gradient(
+      $color-gray-light 0% 25%,
+      $color-white 0% 50%
+    )
+    50%/ 120px;
+  cursor: pointer;
+}
+
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.custom-option {
+  border: 10px solid $color-gray-medium;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  transition: all 0.5s;
+  background: repeating-conic-gradient(
+      $color-gray-light 0% 25%,
+      $color-white 0% 50%
+    )
+    50%/ 120px;
+}
+.custom-option:hover {
+  cursor: pointer;
+}
+.custom-option.selected {
+  z-index: 1;
+  @include border-active();
+  border-width: 5px;
+}
+
+.arrow {
+  @include border();
+  border-radius: 0px 5px 5px 0px;
+  background-color: $color-white;
+  height: 100%;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(4rem);
+}
