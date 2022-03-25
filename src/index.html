@@ -21,7 +21,9 @@
   </head>
   <body>
     <div class="logo">
-      <img class="logo__img" src="./assets/imgs/logo.png" alt="Iubenda logo" />
+      <a rel="noreferrer" target="_blank" href="https://www.iubenda.com/en/"
+        ><img class="logo__img" src="./assets/imgs/logo.png" alt="Iubenda logo"
+      /></a>
     </div>
 
     <!-- MAIN CONTENT -->
@@ -50,13 +52,13 @@
 
         <div class="header__right flex">
           <p class="bold">Your current compliance ratio</p>
-          <div class="por-ahora">23%</div>
+          <span class="color"><span id="completed"></span></span>
         </div>
       </section>
 
       <!-- ///////////////////////////////////////////////////////////////////////////////// -->
       <!-- ADD A COOKIE SECTION -->
-      <section class="cookie">
+      <section>
         <div class="banner">
           <div class="img-square img-square--medium img-square--bg-green">
             <svg
@@ -82,7 +84,7 @@
 
         <div class="toggle flex">
           <label class="toggle__switch">
-            <input type="checkbox" />
+            <input type="checkbox" id="cookie-toggle" />
             <span class="toggle__switch--slider"></span>
           </label>
 
@@ -91,239 +93,265 @@
           </div>
         </div>
 
-        <div class="flex flex-lg">
-          <div class="option">
-            <p class="subtitle">Position</p>
-            <div class="select-wrapper">
-              <div class="select">
-                <div class="select__trigger">
-                  <span><div class="position" data-pos="6"></div></span>
-                  <div class="arrow">&#9660;</div>
+        <div id="cookie">
+          <div class="flex flex-lg">
+            <div class="option">
+              <p class="subtitle">Position</p>
+              <div class="select-wrapper">
+                <div class="select">
+                  <div class="select__trigger">
+                    <span><div class="position" data-pos="6"></div></span>
+                    <div class="arrow">&#9660;</div>
+                  </div>
+                  <div class="custom-options">
+                    <span class="custom-option">
+                      <div class="position" data-pos="1"></div>
+                    </span>
+                    <span class="custom-option">
+                      <div class="position" data-pos="2"></div>
+                    </span>
+                    <span class="custom-option">
+                      <div class="position" data-pos="3"></div>
+                    </span>
+                    <span class="custom-option">
+                      <div class="position" data-pos="4"></div>
+                    </span>
+                    <span class="custom-option">
+                      <div class="position" data-pos="5"></div>
+                    </span>
+                    <span class="custom-option selected">
+                      <div class="position" data-pos="6"></div>
+                    </span>
+                    <span class="custom-option">
+                      <div class="position" data-pos="7"></div>
+                    </span>
+                    <span class="custom-option">
+                      <div class="position" data-pos="8"></div>
+                    </span>
+                    <span class="custom-option">
+                      <div class="position" data-pos="9"></div>
+                    </span>
+                  </div>
                 </div>
-                <div class="custom-options">
-                  <span class="custom-option">
-                    <div class="position" data-pos="1"></div>
-                  </span>
-                  <span class="custom-option">
-                    <div class="position" data-pos="2"></div>
-                  </span>
-                  <span class="custom-option">
-                    <div class="position" data-pos="3"></div>
-                  </span>
-                  <span class="custom-option">
-                    <div class="position" data-pos="4"></div>
-                  </span>
-                  <span class="custom-option">
-                    <div class="position" data-pos="5"></div>
-                  </span>
-                  <span class="custom-option selected">
-                    <div class="position" data-pos="6"></div>
-                  </span>
-                  <span class="custom-option">
-                    <div class="position" data-pos="7"></div>
-                  </span>
-                  <span class="custom-option">
-                    <div class="position" data-pos="8"></div>
-                  </span>
-                  <span class="custom-option">
-                    <div class="position" data-pos="9"></div>
-                  </span>
-                </div>
+              </div>
+            </div>
+
+            <div class="option">
+              <p class="subtitle">Theme</p>
+              <div class="flex">
+                <label class="flex flex-vt"
+                  ><input
+                    type="radio"
+                    name="theme"
+                    class="choice__box--radio"
+                  />
+                  <div class="choice__box choice__box--banner">
+                    <img src="./assets/imgs/banner_dark.png" alt="Dark theme" />
+                  </div>
+                  <div class="choice__text">
+                    <p>Dark</p>
+                  </div></label
+                >
+
+                <label class="flex flex-vt"
+                  ><input
+                    type="radio"
+                    name="theme"
+                    class="choice__box--radio"
+                  />
+                  <div class="choice__box choice__box--banner">
+                    <img
+                      src="./assets/imgs/banner_light.png"
+                      alt="Light theme"
+                    />
+                  </div>
+                  <div class="choice__text">
+                    <p>Light</p>
+                  </div></label
+                >
+
+                <label class="flex flex-vt" onclick="importData()"
+                  ><input
+                    type="radio"
+                    name="theme"
+                    class="choice__box--radio"
+                  />
+                  <div class="choice__box choice__box--banner">
+                    <span class="plus">&#xFF0B;</span>
+                  </div>
+                  <div class="choice__text">
+                    <p>Custom Style</p>
+                  </div></label
+                >
               </div>
             </div>
           </div>
 
           <div class="option">
-            <p class="subtitle">Theme</p>
+            <p class="subtitle">Legislation</p>
+
             <div class="flex">
-              <label class="flex flex-vt"
-                ><input type="radio" name="theme" class="choice__box--radio" />
-                <div class="choice__box choice__box--banner">
-                  <img src="./assets/imgs/banner_dark.png" alt="Dark theme" />
-                </div>
-                <div class="choice__text">
-                  <p>Dark</p>
+              <label
+                ><input
+                  type="radio"
+                  name="legislation"
+                  class="choice__box--radio"
+                />
+                <div class="choice__box flex flex-center choice__active">
+                  <p>GDRP Only</p>
                 </div></label
               >
-
-              <label class="flex flex-vt"
-                ><input type="radio" name="theme" class="choice__box--radio" />
-                <div class="choice__box choice__box--banner">
-                  <img src="./assets/imgs/banner_light.png" alt="Light theme" />
-                </div>
-                <div class="choice__text">
-                  <p>Light</p>
+              <label>
+                <input
+                  type="radio"
+                  name="legislation"
+                  class="choice__box--radio"
+                />
+                <div class="choice__box flex flex-center">
+                  <p>CCPA Only</p>
                 </div></label
               >
-
-              <label class="flex flex-vt"
-                ><input type="radio" name="theme" class="choice__box--radio" />
-                <div class="choice__box choice__box--banner">
-                  <span class="plus">&#xFF0B;</span>
-                </div>
-                <div class="choice__text">
-                  <p>Custom Style</p>
+              <label>
+                <input
+                  type="radio"
+                  name="legislation"
+                  class="choice__box--radio"
+                />
+                <div class="choice__box flex flex-center">
+                  <p>Both</p>
                 </div></label
               >
             </div>
           </div>
-        </div>
 
-        <div class="option">
-          <p class="subtitle">Legislation</p>
+          <div class="option">
+            <p class="subtitle">Require consent from</p>
 
-          <div class="flex">
-            <label
-              ><input
-                type="radio"
-                name="legislation"
-                class="choice__box--radio"
-              />
-              <div class="choice__box flex flex-center choice__active">
-                <p>GDRP Only</p>
-              </div></label
-            >
-            <label>
-              <input
-                type="radio"
-                name="legislation"
-                class="choice__box--radio"
-              />
-              <div class="choice__box flex flex-center">
-                <p>CCPA Only</p>
-              </div></label
-            >
-            <label>
-              <input
-                type="radio"
-                name="legislation"
-                class="choice__box--radio"
-              />
-              <div class="choice__box flex flex-center">
-                <p>Both</p>
-              </div></label
-            >
-          </div>
-        </div>
+            <div class="flex">
+              <label>
+                <input type="radio" name="consent" class="choice__box--radio" />
+                <div class="choice__box flex">
+                  <svg
+                    width="50"
+                    height="50"
+                    viewBox="0 0 30 30"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    preserveAspectRatio="xMinYMin"
+                  >
+                    <use xlink:href="#icon-eu-flag-green" class="green"></use>
+                    <use xlink:href="#icon-eu-flag" class="gray"></use>
+                  </svg>
+                  <p>EU Only</p>
+                </div>
+              </label>
 
-        <div class="option">
-          <p class="subtitle">Require consent from</p>
-
-          <div class="flex">
-            <label>
-              <input type="radio" name="consent" class="choice__box--radio" />
-              <div class="choice__box flex">
-                <svg
-                  width="50"
-                  height="50"
-                  viewBox="0 0 30 30"
-                  xmlns="http://www.w3.org/2000/svg"
-                  version="1.1"
-                  preserveAspectRatio="xMinYMin"
-                >
-                  <use xlink:href="#icon-eu-flag-green" class="green"></use>
-                  <use xlink:href="#icon-eu-flag" class="gray"></use>
-                </svg>
-                <p>EU Only</p>
-              </div>
-            </label>
-
-            <label>
-              <input type="radio" name="consent" class="choice__box--radio" />
-              <div class="choice__box flex">
-                <svg
-                  width="50"
-                  height="50"
-                  viewBox="0 0 30 30"
-                  xmlns="http://www.w3.org/2000/svg"
-                  version="1.1"
-                  preserveAspectRatio="xMinYMin"
-                >
-                  <use xlink:href="#icon-world-green" class="green"></use>
-                  <use xlink:href="#icon-world" class="gray"></use>
-                </svg>
-                <p>World Wide</p>
-              </div>
-            </label>
-          </div>
-        </div>
-
-        <div class="option">
-          <p class="subtitle">Banner buttons</p>
-
-          <div class="helper">
-            <label class="option__label"
-              ><p>Explicit Accept and Customize buttons</p>
-              <input class="option__input" type="checkbox" />
-              <span class="option__check"></span>
-            </label>
+              <label>
+                <input type="radio" name="consent" class="choice__box--radio" />
+                <div class="choice__box flex">
+                  <svg
+                    width="50"
+                    height="50"
+                    viewBox="0 0 30 30"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    preserveAspectRatio="xMinYMin"
+                  >
+                    <use xlink:href="#icon-world-green" class="green"></use>
+                    <use xlink:href="#icon-world" class="gray"></use>
+                  </svg>
+                  <p>World Wide</p>
+                </div>
+              </label>
+            </div>
           </div>
 
-          <div class="helper">
-            <label class="option__label"
-              ><p>Explicit Reject button</p>
-              <input class="option__input" type="checkbox" />
-              <span class="option__check"></span>
-            </label>
+          <div class="option">
+            <p class="subtitle">Banner buttons</p>
+
+            <div class="helper">
+              <label class="option__label"
+                ><p>Explicit Accept and Customize buttons</p>
+                <input class="option__input" type="checkbox" />
+                <span class="option__check"></span>
+              </label>
+            </div>
+
+            <div class="helper">
+              <label class="option__label"
+                ><p>Explicit Reject button</p>
+                <input class="option__input" type="checkbox" />
+                <span class="option__check"></span>
+              </label>
+            </div>
           </div>
-        </div>
 
-        <div class="option">
-          <p class="subtitle">Other options</p>
+          <div class="option">
+            <p class="subtitle">Other options</p>
 
-          <div class="helper">
-            <label class="option__label"
-              ><p>
-                Enable IAB Transparecy and Consent Framework -
-                <a href="#" class="placeholder">Learn more</a>
+            <div class="helper">
+              <label class="option__label"
+                ><p>
+                  Enable IAB Transparecy and Consent Framework -
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.iubenda.com/en/help/7440-iab-framework-cmp"
+                    class="placeholder"
+                    >Learn more</a
+                  >
+                </p>
+                <input class="option__input" type="checkbox" />
+                <span class="option__check"></span>
+              </label>
+            </div>
+
+            <div class="banner banner--warning banner--small">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 500 500"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                preserveAspectRatio="xMinYMin"
+              >
+                <use xlink:href="#icon-alert"></use>
+              </svg>
+
+              <p class="banner__text">
+                You should activate this feature if you show
+                <strong>ads</strong> on your website
               </p>
-              <input class="option__input" type="checkbox" />
-              <span class="option__check"></span>
-            </label>
-          </div>
+            </div>
 
-          <div class="banner banner--warning banner--small">
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 500 500"
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              preserveAspectRatio="xMinYMin"
-            >
-              <use xlink:href="#icon-alert"></use>
-            </svg>
+            <div class="helper">
+              <label class="option__label"
+                ><p class="gg-amp">Enable Google AMP support <span>?</span></p>
+                <input class="option__input" type="checkbox" />
+                <span class="option__check"></span>
+              </label>
+            </div>
 
-            <p class="banner__text">
-              You should activate this feature if you show
-              <strong>ads</strong> on your website
-            </p>
-          </div>
+            <div class="helper">
+              <label class="option__label"
+                ><p class="bl-scr">
+                  Automatically block scripts detected by plugin <span>?</span>
+                </p>
 
-          <div class="helper">
-            <label class="option__label"
-              ><p>Enable Google AMP support</p>
-              <input class="option__input" type="checkbox" />
-              <span class="option__check"></span>
-            </label>
-          </div>
-
-          <div class="helper">
-            <label class="option__label"
-              ><p>Automatically block scripts detected by plugin</p>
-              <input class="option__input" type="checkbox" />
-              <span class="option__check"></span>
-            </label>
+                <input class="option__input" type="checkbox" />
+                <span class="option__check"></span>
+              </label>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ///////////////////////////////////////////////////////////////////////////////// -->
       <!-- ADD PRIVACY BUTTON SECTION -->
-      <section class="privacy">
+      <section>
         <div class="toggle flex">
           <label class="toggle__switch">
-            <input type="checkbox" />
+            <input type="checkbox" id="privacy-toogle" />
             <span class="toggle__switch--slider"></span>
           </label>
 
@@ -332,56 +360,61 @@
           </div>
         </div>
 
-        <div class="option">
-          <p class="subtitle">Button style</p>
-          <div class="flex">
-            <label class="flex flex-vt">
-              <input
-                type="radio"
-                name="privacy-btn"
-                class="choice__box--radio"
-              />
-              <div class="choice__box choice__box--privacy">
-                <img src="./assets/imgs/button_light.png" alt="Button light" />
-              </div>
-              <div class="choice__text">
-                <p>Light</p>
-              </div>
-            </label>
+        <div id="privacy">
+          <div class="option">
+            <p class="subtitle">Button style</p>
+            <div class="flex">
+              <label class="flex flex-vt">
+                <input
+                  type="radio"
+                  name="privacy-btn"
+                  class="choice__box--radio"
+                />
+                <div class="choice__box choice__box--privacy">
+                  <img
+                    src="./assets/imgs/button_light.png"
+                    alt="Button light"
+                  />
+                </div>
+                <div class="choice__text">
+                  <p>Light</p>
+                </div>
+              </label>
 
-            <label class="flex flex-vt">
-              <input
-                type="radio"
-                name="privacy-btn"
-                class="choice__box--radio"
-              />
-              <div class="choice__box choice__box--privacy">
-                <img src="./assets/imgs/button_dark.png" alt="button dark" />
-              </div>
-              <div class="choice__text">
-                <p>Dark</p>
-              </div>
-            </label>
-          </div>
-        </div>
-
-        <div class="option">
-          <p class="subtitle">Button position</p>
-          <div class="flex">
-            <div class="helper">
-              <label class="option__label"
-                ><p>Put automatically button on footer</p>
-                <input class="option__input" type="radio" name="btn-pos" />
-                <span class="option__check option__check--radio"></span>
+              <label class="flex flex-vt">
+                <input
+                  type="radio"
+                  name="privacy-btn"
+                  class="choice__box--radio"
+                />
+                <div class="choice__box choice__box--privacy">
+                  <img src="./assets/imgs/button_dark.png" alt="button dark" />
+                </div>
+                <div class="choice__text">
+                  <p>Dark</p>
+                </div>
               </label>
             </div>
+          </div>
 
-            <div class="helper">
-              <label class="option__label"
-                ><p>Integrate button manually</p>
-                <input class="option__input" type="radio" name="btn-pos" />
-                <span class="option__check option__check--radio"></span>
-              </label>
+          <div class="option">
+            <p class="subtitle">Button position</p>
+            <div class="flex">
+              <div class="helper">
+                <label class="option__label"
+                  ><p>Put automatically button on footer</p>
+                  <input class="option__input" type="radio" name="btn-pos" />
+                  <span class="option__check option__check--radio"></span>
+                </label>
+              </div>
+
+              <div class="helper">
+                <label class="option__label"
+                  ><p>Integrate button manually</p>
+                  <input class="option__input" type="radio" name="btn-pos" />
+                  <span class="option__check option__check--radio"></span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -399,7 +432,11 @@
     <!-- DOC AND SUPPORT -->
     <div class="contact flex flex-center">
       <a href="#">Documentation</a>
-      <a href="#">Contact support</a>
+      <a
+        target="_blank"
+        href="mailto:kurtguardia@gmail.com?subject=Welcome!&body=Dear Kurt, regarding the position we are happy to tell you......"
+        >Contact support</a
+      >
     </div>
 
     <!-- ///////////////////////////////////////////////////////////////////////////////// -->

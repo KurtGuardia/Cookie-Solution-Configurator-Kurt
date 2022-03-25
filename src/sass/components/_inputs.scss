@@ -20,6 +20,48 @@
     &:hover .option__input:checked ~ .option__check {
       background-color: $color-gray-light;
     }
+
+    & .gg-amp,
+    & .bl-scr {
+      & span {
+        font-size: $font-small;
+        font-weight: 500;
+        border-radius: 50%;
+        background-color: $color-gray-medium;
+        color: $color-white;
+        margin-left: 1rem;
+        padding: 0.5rem;
+        position: relative;
+      }
+    }
+
+    & > p::before {
+      z-index: 10;
+      display: none;
+      background-color: $color-ok;
+      color: $color-white;
+      padding: 1rem;
+      border-radius: 5px;
+      position: absolute;
+      top: 3rem;
+      left: 7rem;
+      right: -7rem;
+    }
+
+    & > .gg-amp::before {
+      content: 'AMP is an open source project designed to help web publishers create mobile-optimized content that loads instantly on all devices, according to Google. “We want webpages with rich content like video, animations and graphics to work alongside smart ads, and to load instantaneously,” Google wrote in a blog post.Jul 6, 2016';
+    }
+
+    & > .bl-scr::before {
+      content: 'This plugin is an All-in-One approach developed by iubenda, which includes functionalities of two powerful solutions that help to make your website GDPR and ePrivacy compliant. ';
+    }
+
+    & .gg-amp:hover,
+    & .bl-scr:hover {
+      &::before {
+        display: block;
+      }
+    }
   }
 
   &__input {

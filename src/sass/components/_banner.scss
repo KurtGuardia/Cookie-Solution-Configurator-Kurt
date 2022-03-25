@@ -4,7 +4,6 @@
   @include center-indv();
   @include border();
   position: relative;
-
   &::before,
   &::after {
     @include center-indv();

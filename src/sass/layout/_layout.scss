@@ -1,3 +1,4 @@
+@use '../abstracts/' as *;
 section {
   & > .banner {
     margin-bottom: 3rem;
@@ -12,9 +13,49 @@ section {
   & > * {
     align-items: center;
   }
+
+  &__right {
+    & span {
+      font-size: $font-xl;
+      color: $color-maroon;
+      border-radius: 50%;
+
+      &.color {
+        background: linear-gradient(
+          45deg,
+          $color-gray-medium 65%,
+          $color-maroon 55%
+        );
+        padding: 3rem 0.7rem;
+      }
+
+      &#completed {
+        padding: 2.5rem;
+        background-color: $color-white;
+      }
+    }
+  }
 }
 
 .subtitle {
   margin-bottom: 2rem;
   font-weight: 500;
+}
+
+#cookie {
+  display: none;
+
+  @include mq(tab-port) {
+    & > .flex {
+      flex-direction: column;
+
+      & > .option {
+        margin: auto;
+      }
+    }
+  }
+}
+
+#privacy {
+  display: none;
 }

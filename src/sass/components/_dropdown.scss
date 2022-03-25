@@ -3,6 +3,7 @@
 .select-wrapper {
   user-select: none;
   min-width: 20rem;
+  max-width: 20rem;
   @include border();
   border-radius: 5px 0px 0px 5px;
 }

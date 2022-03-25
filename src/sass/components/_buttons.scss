@@ -12,18 +12,18 @@
     cursor: pointer;
   }
 
-  &:active,
-  &:focus {
-    outline: none;
-    transform: translateY(-1px);
-    box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.2);
-  }
-
   &--cta {
     background-color: $color-primary;
     color: $color-white;
     padding: 1.5rem 20rem;
     font-weight: 900;
+
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.2);
+    }
 
     &:hover {
       transform: translateY(-3px);
