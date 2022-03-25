@@ -42,10 +42,25 @@ body {
     font-size: $font-medium;
     font-weight: 500;
   }
+
+  .logo {
+    width: fit-content;
+    margin: auto;
+    padding: 2.5rem 0;
+
+    & > img {
+      width: 18rem;
+    }
+  }
+
+  .contact {
+    margin: 3rem 0 5rem 0;
+  }
 }
 
 .page {
   background-color: $color-white;
+  border-radius: 5px;
   margin: 0 4rem;
 }
 
