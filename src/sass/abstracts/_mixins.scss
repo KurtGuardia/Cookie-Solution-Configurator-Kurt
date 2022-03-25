@@ -23,6 +23,8 @@
 }
 
 @mixin hide {
+  cursor: pointer;
+  position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
@@ -31,4 +33,9 @@
 @mixin border {
   border: 1px solid $color-gray-medium;
   border-radius: 5px;
+}
+
+@mixin border-active {
+  border: 1px solid $color-primary;
+  box-shadow: 0 0 5px $color-ok;
 }

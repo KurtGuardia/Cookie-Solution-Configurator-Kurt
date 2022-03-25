@@ -93,7 +93,7 @@
         <div class="flex flex-lg">
           <div class="option">
             <p class="subtitle">Position</p>
-            <div class="por-ahora choice">
+            <div class="por-ahora select">
               <img src="./assets/imgs/banner_light.png" alt="por ahora" />
             </div>
           </div>
@@ -101,32 +101,35 @@
           <div class="option">
             <p class="subtitle">Theme</p>
             <div class="flex">
-              <div class="choice">
-                <div class="choice__box">
+              <label class="flex flex-vt"
+                ><input type="radio" name="theme" class="choice__box--radio" />
+                <div class="choice__box choice__box--banner">
                   <img src="./assets/imgs/banner_dark.png" alt="Dark theme" />
                 </div>
                 <div class="choice__text">
                   <p>Dark</p>
-                </div>
-              </div>
+                </div></label
+              >
 
-              <div class="choice">
-                <div class="choice__box">
+              <label class="flex flex-vt"
+                ><input type="radio" name="theme" class="choice__box--radio" />
+                <div class="choice__box choice__box--banner">
                   <img src="./assets/imgs/banner_light.png" alt="Light theme" />
                 </div>
                 <div class="choice__text">
                   <p>Light</p>
-                </div>
-              </div>
+                </div></label
+              >
 
-              <div class="choice">
-                <div class="choice__box">
-                  <div class="span">&plus;</div>
+              <label class="flex flex-vt"
+                ><input type="radio" name="theme" class="choice__box--radio" />
+                <div class="choice__box choice__box--banner">
+                  <span class="plus">&#xFF0B;</span>
                 </div>
                 <div class="choice__text">
                   <p>Custom Style</p>
-                </div>
-              </div>
+                </div></label
+              >
             </div>
           </div>
         </div>
@@ -135,17 +138,36 @@
           <p class="subtitle">Legislation</p>
 
           <div class="flex">
-            <div class="choice__active">
-              <p>GDRP Only</p>
-            </div>
-
-            <div class="choice">
-              <p>CCPA Only</p>
-            </div>
-
-            <div class="choice">
-              <p>Both</p>
-            </div>
+            <label
+              ><input
+                type="radio"
+                name="legislation"
+                class="choice__box--radio"
+              />
+              <div class="choice__box flex flex-center choice__active">
+                <p>GDRP Only</p>
+              </div></label
+            >
+            <label>
+              <input
+                type="radio"
+                name="legislation"
+                class="choice__box--radio"
+              />
+              <div class="choice__box flex flex-center">
+                <p>CCPA Only</p>
+              </div></label
+            >
+            <label>
+              <input
+                type="radio"
+                name="legislation"
+                class="choice__box--radio"
+              />
+              <div class="choice__box flex flex-center">
+                <p>Both</p>
+              </div></label
+            >
           </div>
         </div>
 
@@ -153,33 +175,41 @@
           <p class="subtitle">Require consent from</p>
 
           <div class="flex">
-            <div class="choice__active">
-              <svg
-                width="100"
-                height="100"
-                viewBox="0 0 50 50"
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                preserveAspectRatio="xMinYMin"
-              >
-                <use xlink:href="#icon-eu-flag"></use>
-              </svg>
-              <p>EU Only</p>
-            </div>
+            <label>
+              <input type="radio" name="consent" class="choice__box--radio" />
+              <div class="choice__box flex">
+                <svg
+                  width="50"
+                  height="50"
+                  viewBox="0 0 30 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  preserveAspectRatio="xMinYMin"
+                >
+                  <use xlink:href="#icon-eu-flag-green" class="green"></use>
+                  <use xlink:href="#icon-eu-flag" class="gray"></use>
+                </svg>
+                <p>EU Only</p>
+              </div>
+            </label>
 
-            <div class="choice">
-              <svg
-                width="100"
-                height="100"
-                viewBox="0 0 50 50"
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                preserveAspectRatio="xMinYMin"
-              >
-                <use xlink:href="#icon-world"></use>
-              </svg>
-              <p>World Wide</p>
-            </div>
+            <label>
+              <input type="radio" name="consent" class="choice__box--radio" />
+              <div class="choice__box flex">
+                <svg
+                  width="50"
+                  height="50"
+                  viewBox="0 0 30 30"
+                  xmlns="http://www.w3.org/2000/svg"
+                  version="1.1"
+                  preserveAspectRatio="xMinYMin"
+                >
+                  <use xlink:href="#icon-world-green" class="green"></use>
+                  <use xlink:href="#icon-world" class="gray"></use>
+                </svg>
+                <p>World Wide</p>
+              </div>
+            </label>
           </div>
         </div>
 
@@ -270,23 +300,33 @@
         <div class="option">
           <p class="subtitle">Button style</p>
           <div class="flex">
-            <div class="choice">
-              <div class="choice__box">
+            <label class="flex flex-vt">
+              <input
+                type="radio"
+                name="privacy-btn"
+                class="choice__box--radio"
+              />
+              <div class="choice__box choice__box--privacy">
                 <img src="./assets/imgs/button_light.png" alt="Button light" />
               </div>
               <div class="choice__text">
                 <p>Light</p>
               </div>
-            </div>
+            </label>
 
-            <div class="choice">
-              <div class="choice__box">
+            <label class="flex flex-vt">
+              <input
+                type="radio"
+                name="privacy-btn"
+                class="choice__box--radio"
+              />
+              <div class="choice__box choice__box--privacy">
                 <img src="./assets/imgs/button_dark.png" alt="button dark" />
               </div>
               <div class="choice__text">
                 <p>Dark</p>
               </div>
-            </div>
+            </label>
           </div>
         </div>
 
@@ -296,7 +336,7 @@
             <div class="helper">
               <label class="option__label"
                 ><p>Put automatically button on footer</p>
-                <input class="option__input" type="radio" name="radio" />
+                <input class="option__input" type="radio" name="btn-pos" />
                 <span class="option__check option__check--radio"></span>
               </label>
             </div>
@@ -304,7 +344,7 @@
             <div class="helper">
               <label class="option__label"
                 ><p>Integrate button manually</p>
-                <input class="option__input" type="radio" name="radio" />
+                <input class="option__input" type="radio" name="btn-pos" />
                 <span class="option__check option__check--radio"></span>
               </label>
             </div>
@@ -327,8 +367,8 @@
       <a href="#">Contact support</a>
     </div>
 
-      <!-- ///////////////////////////////////////////////////////////////////////////////// -->
-      <!-- SPRITE SVG -->
+    <!-- ///////////////////////////////////////////////////////////////////////////////// -->
+    <!-- SPRITE SVG -->
     <svg display="none">
       <defs>
         <g id="icon-alert">
@@ -369,11 +409,69 @@
             />
           </g>
         </g>
+        <g id="icon-eu-flag-green">
+          <g xmlns="http://www.w3.org/2000/svg" fill="none" fill-rule="evenodd">
+            <g fill="#1cc691">
+              <path
+                fill-opacity=".1"
+                d="m4.5 4.5h25.5v18h-25.5z"
+                transform="translate(1 3)"
+              />
+              <path
+                d="m13.5 6c.4142136 0 .75-.33578644.75-.75s-.3357864-.75-.75-.75-.75.33578644-.75.75.3357864.75.75.75z"
+                transform="translate(1 3)"
+              />
+              <path
+                d="m13.5 16.5c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75-.75.3357864-.75.75.3357864.75.75.75z"
+                transform="translate(1 3)"
+              />
+              <path
+                d="m18.75 11.25c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75-.75.3357864-.75.75.3357864.75.75.75z"
+                transform="rotate(90 17.75 12.5)"
+              />
+              <path
+                d="m8.25 11.25c.41421356 0 .75-.3357864.75-.75s-.33578644-.75-.75-.75-.75.3357864-.75.75.33578644.75.75.75z"
+                transform="rotate(90 7.25 12.5)"
+              />
+              <path
+                d="m17.2123106 14.9623106c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75-.75.3357864-.75.75.3357864.75.75.75z"
+                transform="rotate(135 17.091 15.92)"
+              />
+              <path
+                d="m9.7876894 7.5376894c.4142136 0 .75-.33578644.75-.75s-.3357864-.75-.75-.75c-.41421356 0-.75.33578644-.75.75s.33578644.75.75.75z"
+                transform="rotate(135 9.666 8.495)"
+              />
+              <path
+                d="m9.7876894 14.9623106c.4142136 0 .75-.3357864.75-.75s-.3357864-.75-.75-.75c-.41421356 0-.75.3357864-.75.75s.33578644.75.75.75z"
+                transform="rotate(-135 10.909 15.505)"
+              />
+              <path
+                d="m17.2123106 7.5376894c.4142136 0 .75-.33578644.75-.75s-.3357864-.75-.75-.75-.75.33578644-.75.75.3357864.75.75.75z"
+                transform="rotate(-135 18.334 8.08)"
+              />
+            </g>
+            <path
+              stroke="#1cc691"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m.75 1.5h25.3906929v18h-25.3906929z"
+              transform="translate(1 3)"
+            />
+            <path
+              fill="#d8d8d8"
+              stroke="#1cc691"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m.75 0v26.027153"
+              transform="translate(1 3)"
+            />
+          </g>
+        </g>
         <g id="icon-eu-flag">
           <g xmlns="http://www.w3.org/2000/svg" fill="none" fill-rule="evenodd">
             <g fill="#000">
               <path
-                fill-opacity=".05"
+                fill-opacity=".1"
                 d="m4.5 4.5h25.5v18h-25.5z"
                 transform="translate(1 3)"
               />
@@ -436,6 +534,31 @@
           >
             <circle cx="18" cy="14.368" r="13" fill="#000" fill-opacity=".05" />
             <g stroke="#000">
+              <circle cx="13" cy="13.368" r="13" />
+              <path
+                d="m17.5454545 4.36842105h-3.4090909l-2.0454545 1.71428572v1.14285714h-2.0454546l-2.0454545 1.14285714v1.14285715h3.4090909l.6818182.5714286h1.3636364l1.3636363 1.1428571h2.7272727l1.3636364 1.1428572 1.3636364-1.1428572h2.7272727"
+              />
+              <path
+                d="m15.5 15.2434211h-1.25l-1.875-1.875h-2.5l-1.875 1.875 1.25 3.125h1.875l1.25 1.25v3.125l.625.625h1.25l1.875-1.875v-1.875l1.875-1.875z"
+              />
+            </g>
+          </g>
+        </g>
+        <g id="icon-world-green">
+          <g
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            fill-rule="evenodd"
+            transform="translate(1 2)"
+          >
+            <circle
+              cx="18"
+              cy="14.368"
+              r="13"
+              fill="#1cc691"
+              fill-opacity=".1"
+            />
+            <g stroke="#1cc691">
               <circle cx="13" cy="13.368" r="13" />
               <path
                 d="m17.5454545 4.36842105h-3.4090909l-2.0454545 1.71428572v1.14285714h-2.0454546l-2.0454545 1.14285714v1.14285715h3.4090909l.6818182.5714286h1.3636364l1.3636363 1.1428571h2.7272727l1.3636364 1.1428572 1.3636364-1.1428572h2.7272727"

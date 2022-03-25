@@ -1,0 +1,74 @@
+@use '../abstracts/' as *;
+
+.choice {
+  &__box {
+    @include border();
+    align-items: center;
+    min-width: 20rem;
+    min-height: 8rem;
+    padding: 0 2rem;
+    gap: $gap-small;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &--banner {
+      @include center-indv();
+      justify-content: center;
+      max-width: 23rem;
+      min-height: 11rem;
+      max-height: 11rem;
+      font-size: $font-xl;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &--privacy {
+      max-width: 30rem;
+      min-height: 10rem;
+      max-height: 10rem;
+      padding: 2rem 0 2rem 2rem;
+      overflow: hidden;
+
+      & > img {
+        width: 100%;
+        height: 100%;
+        transform: translateX(1rem);
+      }
+    }
+
+    &--radio {
+      @include hide();
+    }
+
+    &--radio:checked ~ & {
+      @include border-active();
+      color: $color-ok;
+
+      & > svg > {
+        & .gray {
+          display: none;
+        }
+        & .green {
+          display: block;
+        }
+      }
+    }
+
+    & > svg > {
+      & .gray {
+        display: block;
+      }
+      & .green {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    cursor: pointer;
+  }
+}
